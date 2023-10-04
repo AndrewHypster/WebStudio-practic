@@ -1,0 +1,290 @@
+:root {
+  /* collors */
+  --IRIS: #4d5ae5;
+  --OCEAN: #404bbf;
+  --NavyBlue: #2e2f42;
+  --GREEN: #31d0aa;
+  --SLATE: #434455;
+  --LightSlate: #8e8f99;
+  --CORNFLOWER: #e7e9fc;
+  --CLOUD: #f4f4fd;
+  --NavyBlueModal: rgba(46, 47, 66, 0.4);
+  --GREY: rgba(46, 47, 66, 0.7);
+  --WHITE: #fff;
+  --DAIRY: #fcfcfc;
+}
+
+/* ============================== *\
+|        # Основні стилі           |
+\* ============================== */
+* {
+  /* стилі для кожного тегу на сторінці */
+  margin: 0;
+  padding: 0;
+  text-decoration: none; /*  для силок  */
+  list-style-type: none; /* для списків */
+  letter-spacing: 0.02rem;
+  transition: all 0.5s;
+  cursor: url("../images/icons/cursor/auto.svg"), auto;
+}
+
+html {
+  background: var(--WHITE);
+  scroll-behavior: smooth; /* щоб сторінка плавно скролилась при якорях */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--SLATE);
+}
+
+header,
+section,
+footer {
+  padding: 0 156px; /* відступи сторінки від країв екрану */
+}
+
+/* Текст */
+h1,
+h2,
+h3 {
+  color: var(--NavyBlue);
+}
+
+h2 {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+p,
+a {
+  color: var(--SLATE);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+a,
+button,
+.logo p,
+.logo span {
+  cursor: url("../images/icons/cursor/pointer.svg"), pointer !important;
+}
+
+/* Кнопки */
+button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  background: var(--IRIS);
+  box-shadow: 0px 4px 4px 0px #00000026;
+  cursor: pointer;
+
+  /* Button Text */
+  color: var(--WHITE);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+button:hover {
+  background: var(--OCEAN);
+}
+
+/* Секції */
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+section h2 {
+  margin-bottom: 72px;
+}
+
+section h3 {
+  margin-bottom: 8px;
+}
+
+section ul {
+  width: 100%;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+section li .info {
+  margin: 32px 0;
+}
+
+/* ============================== *\
+|           # Header               |
+\* ============================== */
+.header {
+  /* я використовую назви тегів, бо ці елементи є одні на сторінці */
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav {
+  width: 452px;
+  align-items: end;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-ul {
+  width: 261px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-ul-a {
+  /* я недавав клас для <a>, бо це ще більше коду, чим більше коду тим довше груться сторінка і тут зрозуміло де стоїть тег а */
+  color: var(--NavyBlue);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.address-ul {
+  width: 344px;
+  font-style: normal;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-ul-a:hover,
+.address-a:hover {
+  color: var(--OCEAN);
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.logo-p {
+  color: var(--IRIS);
+  font-family: Raleway;
+  letter-spacing: 0.03375rem;
+}
+
+.header-span {
+  color: var(--NavyBlue);
+  font-family: Raleway;
+  font-weight: 700;
+  letter-spacing: 0.03375rem;
+}
+
+/* ============================== *\
+|          # Section Hero          |
+\* ============================== */
+.hero-section {
+  height: 600px;
+  padding: 0 0;
+  background: var(--NavyBlue);
+  text-align: center;
+  align-content: center;
+  justify-items: center;
+  grid-row-gap: 48px;
+  display: grid;
+}
+
+.hero-section-h1 {
+  color: var(--WHITE);
+  font-size: 56px;
+  line-height: 60px; /* 107.143% */
+  letter-spacing: 1.12px;
+}
+
+/* ============================== *\
+|           # Section 1            |
+\* ============================== */
+.section1 {
+  height: fit-content;
+  align-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.section1-li {
+  max-width: 264px;
+}
+
+/* ============================== *\
+|           # Section 2            |
+\* ============================== */
+.section2 {
+  background-color: var(--CLOUD);
+  text-align: center;
+}
+
+.section2-li {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--WHITE);
+}
+
+.info .social {
+  margin-top: 8px;
+}
+
+/* ============================== *\
+|           # Section 3            |
+\* ============================== */
+.section3-li {
+  border: 1px solid var(--CORNFLOWER);
+}
+
+.section3-li-text {
+  padding-left: 16px;
+}
+
+/* ============================== *\
+|            # Footer              |
+\* ============================== */
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--NavyBlue);
+}
+
+.footer-span {
+  color: var(--CLOUD);
+}
+
+.footer-p {
+  margin-top: 16px;
+  width: 264px;
+  color: var(--CLOUD);
+}
+
+/* ============================== *\
+|         # Додаткові стилі        |
+\* ============================== */
+/* Стиль скрола сайту */
+body::-webkit-scrollbar {
+  width: 6px; /* ширина */
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  /* задній фон */
+  background: var(--CORNFLOWER);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--SLATE); /* колір того що рухається */
+  border-radius: 3px;
+}
