@@ -242,6 +242,14 @@ section li .info {
   margin-top: 8px;
 }
 
+.info .social a {
+  display: flex;
+}
+
+.info .social img {
+  cursor: inherit;
+}
+
 /* ============================== *\
 |           # Section 3            |
 \* ============================== */
